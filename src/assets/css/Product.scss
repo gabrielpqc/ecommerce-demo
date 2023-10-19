@@ -1,0 +1,16 @@
+@use '../css/Variables.scss';
+
+.product {
+    border: 1px solid var(--grey);
+    padding: 20px;
+
+    .image-wrapper {
+    
+        
+    }
+
+    img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}

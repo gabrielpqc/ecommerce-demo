@@ -1,0 +1,38 @@
+.page-title {
+    padding: 0 20px;
+}
+
+.product-listing {
+    display: grid;
+    grid-template-columns: repeat(var(--list-columns), 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+// Tablet
+@media screen and (min-width: 768px) {
+
+    .product-listing {
+        --list-columns: 3;
+    }
+
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+
+    .product-listing {
+        --list-columns: 4;
+    }
+
+}
+
+// Desktop Big
+@media screen and (min-width: 1440px) {
+
+    .product-listing {
+        --list-columns: 6;
+    }
+
+}
