@@ -1,16 +1,47 @@
 @use '../css/Variables.scss';
 
 .product {
+    background-color: white;
     border: 1px solid var(--grey);
     padding: 20px;
 
     .image-wrapper {
-    
-        
+        position: relative;
+        padding-bottom: 100%;
+    }
+
+    .discount-wrapper {
+        position: absolute;
+        background: red;
+        padding: 5px;
+        z-index: 1;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
     }
 
     img {
-        object-fit: contain;
+        width: 100%;
+        object-fit: cover;
         max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        max-height: 50%;
+    }
+
+    .price {
+        &-with-discount {
+            margin-right: 5px;
+            color: red;
+
+            +.price {
+                color: var(--grey-discount);
+                text-decoration: line-through;
+            }
+        }
     }
 }

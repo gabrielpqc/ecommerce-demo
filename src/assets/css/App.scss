@@ -1,0 +1,6 @@
+@use '../css/Variables.scss';
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--grey-background);
+}

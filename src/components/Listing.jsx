@@ -15,9 +15,9 @@ const Listing = ({title}) => {
 
     return (
         <Fragment>
-            <h1 className="page-title">{title}</h1>
+            <h2 className="page-title">{title}</h2>
             <ol className="product-listing">
-                {products ? products.map((product) => {
+                {products && products.length > 0 ? products.map((product) => {
                     return <Product product={product} key={product.id}/>
                 }) : 'No products were found'}
                 

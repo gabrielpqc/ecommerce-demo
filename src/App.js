@@ -1,9 +1,23 @@
 import React from "react";
-import Listing from "./components/Listing";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import NoPage from "./pages/NoPage";
+import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail";
+
+import './assets/css/App.scss';
 
 const App = () =>{
     return (
-        <Listing title="Product Listing"/>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Home/>}/>
+                    <Route path="/home" element={<Home/>}/>
+                    <Route path="/product" element={<ProductDetail/>}/>
+                    <Route path="*" element={<NoPage/>}/>
+                </Routes>
+            </BrowserRouter>
+        </>
     )
 }
 
