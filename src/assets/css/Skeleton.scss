@@ -1,0 +1,28 @@
+@use '../css/Variables.scss';
+
+.loading {
+
+    img {
+        z-index: -1;
+    }
+
+    .image-wrapper,
+    .product-title,
+    .price-wrapper {
+        color: transparent;
+        animation: skeleton-loading 1s linear infinite alternate;
+    }
+
+    .price-wrapper {
+        max-width: 50%;
+    }
+}
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }

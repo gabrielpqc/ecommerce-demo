@@ -1,7 +1,7 @@
 import React from "react";
 import '../assets/css/Product.scss';
 
-const Product = ({product}) => {
+const Product = ({loaded, product}) => {
 
     const hasDiscount = () => {
         return product.discountPercentage > 0 ? true : false;
@@ -16,7 +16,7 @@ const Product = ({product}) => {
     }
 
     return (
-        <li className="product">
+        <li className={`product ${loaded ? 'loading' : ''}`}>
            <div className="image-wrapper">
                 {hasDiscount() &&
                     <div className="discount-wrapper">

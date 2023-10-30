@@ -40,6 +40,10 @@ module.exports = {
             "sass-loader", // 1. Turns sass into css
         ]
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
